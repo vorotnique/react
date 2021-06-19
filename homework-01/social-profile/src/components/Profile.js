@@ -1,6 +1,6 @@
 import React from 'react';
 import defaultImage from '../logo.svg';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 function Profile({avatar, name, tag, location, followers, views, likes}) {
 	return (

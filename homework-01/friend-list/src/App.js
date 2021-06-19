@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import friends from './friends.json';
+import Friendlist from './components/Friendlist';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<ul className="friendlist">
+				{friends.map(element => (
+					<li key={element.id} className="item">
+						<Friendlist
+							avatar={element.avatar}
+							name={element.name}
+							isOnline={element.isOnline}
+						/>
+					</li>
+				))}
+			</ul>
+		</div>
+	);
 }
 
 export default App;

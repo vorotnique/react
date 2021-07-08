@@ -5,7 +5,6 @@ import statistics from './statistical-data.json';
 import Stats from './components/Stats';
 
 function App() {
-	let color = getRandomColor();
 	return (
 		<div className="App">
 			<section className="statistics">
@@ -16,7 +15,7 @@ function App() {
 						<li
 							key={element.id}
 							className="item"
-							style={{ backgroundColor: color }}
+							style={{ backgroundColor: getRandomColor() }}
 						>
 							<Stats label={element.label} percentage={element.percentage} />
 						</li>

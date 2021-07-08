@@ -1,4 +1,6 @@
+import 'modern-normalize/modern-normalize.css';
 import './App.css';
+import './components/Friendlist.scss';
 import friends from './friends.json';
 import Friendlist from './components/Friendlist';
 

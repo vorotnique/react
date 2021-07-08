@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 
 function Friendlist({avatar, name, isOnline}) {
 	return (
-		<div>
+		<>
 			<span className={isOnline ? 'status green' : 'status red'}></span>
 			<img className="avatar" src={avatar} alt="avatar" width="48" />
 			<p className="name">{name}</p>
-		</div>
+		</>
 	);
 }
 

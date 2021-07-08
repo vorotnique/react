@@ -1,4 +1,6 @@
+import 'modern-normalize/modern-normalize.css';
 import './App.css';
+import './components/Profile.scss';
 import Profile from './components/Profile';
 import user from './user.json';
 

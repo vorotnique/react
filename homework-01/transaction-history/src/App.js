@@ -1,4 +1,5 @@
 import './App.css';
+import './components/Transactions.scss'
 import translist from './transactions.json';
 import Transactions from './components/Transactions';
 
@@ -16,12 +17,13 @@ function App() {
 
 				<tbody>
 					{translist.map(element => (
-						<Transactions
-							id={element.id}
-							type={element.type}
-							amount={element.amount}
-							currency={element.currency}
-						/>
+						<tr key={element.id}>
+							<Transactions
+								type={element.type}
+								amount={element.amount}
+								currency={element.currency}
+							/>
+						</tr>
 					))}
 				</tbody>
 			</table>

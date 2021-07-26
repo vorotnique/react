@@ -1,0 +1,14 @@
+.button {
+
+	&:not(:last-child) {
+		margin-right: 1em;
+	}
+}
+
+.button, .stat {
+	text-transform: capitalize;
+}
+
+.header {
+	font-size: 30px;
+}

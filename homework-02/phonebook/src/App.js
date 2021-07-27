@@ -14,6 +14,10 @@ class App extends Component {
 	};
 	formSubmitHandler = data => {
 		this.setState(prevState => {
+			if (prevState.contacts.filter(a => a.name.toLowerCase() === data.name.toLowerCase()).length !== 0) {
+				alert(`${data.name} is already in contacts.`);
+				return;
+			}
 			return prevState.contacts.unshift({
 				id: shortid.generate(),
 				name: data.name,
